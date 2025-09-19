@@ -1,0 +1,24 @@
+@BASE_URL=http://localhost:3333/api
+
+###
+
+GET {{BASE_URL}}/transactions
+
+###
+
+GET {{BASE_URL}}/transactions/summary
+
+###
+
+GET {{BASE_URL}}/transactions/1f65d3e9-914b-427e-95a2-465b6530b05a
+
+###
+
+POST {{BASE_URL}}/transactions
+content-type: application/json
+
+{
+    "title": "Hamburguer",
+    "amount": 200,
+    "type": "credit"
+}
