@@ -23,7 +23,7 @@ describe('Transactions routes', () => {
       .send({
         title: 'New Transaction',
         amount: 200,
-        type: 'credit',
+        type: 'credit'
       })
       .expect(201)
   })
@@ -34,7 +34,7 @@ describe('Transactions routes', () => {
       .send({
         title: 'New Transaction',
         amount: 200,
-        type: 'credit',
+        type: 'credit'
       })
 
     const cookies = createTransactionResponse.get('Set-Cookie') ?? []
@@ -47,8 +47,8 @@ describe('Transactions routes', () => {
     expect(listaTransactionsResponse.body.data).toEqual([
       expect.objectContaining({
         title: 'New Transaction',
-        amount: 200,
-      }),
+        amount: 200
+      })
     ])
   })
 
@@ -58,7 +58,7 @@ describe('Transactions routes', () => {
       .send({
         title: 'New Transaction',
         amount: 200,
-        type: 'credit',
+        type: 'credit'
       })
 
     const cookies = createTransactionResponse.get('Set-Cookie') ?? []
@@ -78,7 +78,7 @@ describe('Transactions routes', () => {
     expect(getTransactionResponse.body).toEqual(
       expect.objectContaining({
         title: 'New Transaction',
-        amount: 200,
+        amount: 200
       })
     )
   })
@@ -89,7 +89,7 @@ describe('Transactions routes', () => {
       .send({
         title: 'New Transaction',
         amount: 300,
-        type: 'credit',
+        type: 'credit'
       })
 
     const cookies = createCreditTransactionResponse.get('Set-Cookie') ?? []
@@ -100,7 +100,7 @@ describe('Transactions routes', () => {
       .send({
         title: 'Debit Transaction',
         amount: 200,
-        type: 'debit',
+        type: 'debit'
       })
 
     const listaTransactionsResponse = await supertest(app.server)
@@ -109,7 +109,7 @@ describe('Transactions routes', () => {
       .expect(200)
 
     expect(listaTransactionsResponse.body.summary).toEqual({
-      amount: 100,
+      amount: 100
     })
   })
 })

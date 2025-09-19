@@ -2,7 +2,7 @@ import fastifyCookie from '@fastify/cookie'
 import fastify from 'fastify'
 import {
   serializerCompiler,
-  validatorCompiler,
+  validatorCompiler
 } from 'fastify-type-provider-zod'
 import { transactionsRoutes } from './routes'
 

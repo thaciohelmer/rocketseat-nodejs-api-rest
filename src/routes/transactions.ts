@@ -32,7 +32,6 @@ export async function transactionsRoutes(app: FastifyInstance) {
       }),
     },
     preHandler: [checkIfSessionIdExists],
-
     async handler(req) {
       const { id } = req.params
       const sessionId = req.cookies.sessionId
@@ -50,7 +49,6 @@ export async function transactionsRoutes(app: FastifyInstance) {
     method: 'GET',
     url: '/summary',
     preHandler: [checkIfSessionIdExists],
-
     async handler(req) {
       const sessionId = req.cookies.sessionId
 

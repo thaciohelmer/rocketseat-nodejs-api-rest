@@ -1,6 +1,5 @@
 {
   "extends": "@tsconfig/node24/tsconfig.json",
-
   "compilerOptions": {
     "rootDir": "./src",
     "outDir": "dist",
@@ -9,5 +8,5 @@
       "@/*": ["src/*"]
     }
   },
-  "exclude": ["node_modules", "dist", "db", "test", "knexfile.ts"]
+  "exclude": ["node_modules", "dist", "db"]
 }
